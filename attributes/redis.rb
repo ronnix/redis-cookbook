@@ -1,7 +1,6 @@
-default[:redis][:version]   = "2.2.1"
-default[:redis][:checksum]  = "a64c32f37e67bdeabbab74f8413a960a8d42e381"
+default[:redis][:version]   = "2.2.4"
+default[:redis][:checksum]  = "c98260dfab860da934d465e829ad0866"
 default[:redis][:source]    = "http://redis.googlecode.com/files/redis-#{redis[:version]}.tar.gz"
-
 
 default[:redis][:bins]      = %w(redis-benchmark redis-cli redis-server mkreleasehdr.sh redis-check-aof redis-check-dump)
 
@@ -21,7 +20,7 @@ default[:redis][:snapshots]   = {
   60  => 10000
 }
 default[:redis][:dbfilename]   = "redis_state.rdb"
-default[:redis][:bind_address]= "0.0.0.0"
+default[:redis][:bind_address]= "127.0.0.1"
 default[:redis][:loglevel]    = "notice"
 
 default[:redis][:master]      = false
